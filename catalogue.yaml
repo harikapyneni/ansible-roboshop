@@ -53,5 +53,10 @@
       dest: /app
       remote_src: yes
 
+  - name: install dependencies
+    ansible.builtin.command: npm install
+      args:
+      chdir: /app  #chdir-->change directory
+      #execute untill this to install
 
    
