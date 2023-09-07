@@ -45,4 +45,4 @@
     ansible.builtin.get_url:
       url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip
 
-  - name: 
+   
