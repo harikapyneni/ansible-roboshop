@@ -1,0 +1,7 @@
+- name: catalogue component
+  hosts: catalogue
+  become: yes
+  tasks:
+  - name : Setuu NPM source #refere RoboShop-Documentation
+    ansible.builtin.script: curl -sL https://rpm.nodesource.com/setup_lts.x | bash #execute until this part
+     
