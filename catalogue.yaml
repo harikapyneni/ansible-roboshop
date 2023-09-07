@@ -2,5 +2,5 @@
   hosts: catalogue
   become: yes
   tasks:
-  - name : Setuu NPM source #refere RoboShop-Documentation
-    ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash #execute until this part
+  - name : Setup NPM source #refere RoboShop-Documentation
+    ansible.builtin.shell: "curl -sL https://rpm.nodesource.com/setup_lts.x | bash" #execute until this part
