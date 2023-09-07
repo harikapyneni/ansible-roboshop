@@ -59,4 +59,8 @@
       chdir: /app  #chdir-->change directory
       #execute untill this to install
 
+  - name: copy catalogue service
+    ansible.builtin.copy:
+      src: catalogue.service
+      dest: /etc/systemd/system/catalogue.service
    
