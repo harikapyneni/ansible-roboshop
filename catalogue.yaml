@@ -32,8 +32,8 @@
 
     #print statistics of directory
   - name: print directory stats
-      ansible.builtin.debug:
-        msg: "output is: {{directory}}"
+    ansible.builtin.debug:
+      msg: "output is: {{directory}}"
     
   - when: directory.stat.exists == False #boolean ; False -not exists.(directory.stat.exists) is from error execution
     name: create /app directory
