@@ -53,12 +53,12 @@
       remote_src: yes
 
   - name: install dependencies
-      ansible.builtin.command: npm install
+    ansible.builtin.command: npm install
       args:
         chdir: /app  #chdir-->change directory
         #execute untill this to install
 
-  #load the service
+    #load the service
   - name: daemon reload
     ansible.builtin.systemd:
       daemon_reload: true     
