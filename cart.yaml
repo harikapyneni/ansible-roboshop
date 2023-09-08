@@ -41,12 +41,12 @@
       path: /app
       state: directory
 
-  - name: download user artifact
+  - name: download cart artifact
     ansible.builtin.get_url:
       url : https://roboshop-builds.s3.amazonaws.com/cart.zip
       dest: /tmp 
   
-  - name: extract user artifact
+  - name: extract cart artifact
     ansible.builtin.unarchive:
       src: /tmp/cart.zip
       dest: /app
@@ -58,7 +58,7 @@
       chdir: /app  #chdir-->change directory
       #execute untill this to install
   
-  - name: copy catalogue service
+  - name: copy cart service
     ansible.builtin.copy:
       src: cart.service
       dest: /etc/systemd/system/cart.service
