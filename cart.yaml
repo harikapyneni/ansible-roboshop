@@ -57,6 +57,11 @@
     args:
       chdir: /app  #chdir-->change directory
       #execute untill this to install
+  
+  - name: copy catalogue service
+    ansible.builtin.copy:
+      src: cart.service
+      dest: /etc/systemd/system/cart.service
 
     #load the service
   - name: daemon reload
