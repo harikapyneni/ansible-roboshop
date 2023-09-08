@@ -54,9 +54,9 @@
 
   - name: install dependencies
     ansible.builtin.command: npm install
-      args:
-        chdir: /app  #chdir-->change directory
-        #execute untill this to install
+    args:
+      chdir: /app  #chdir-->change directory
+      #execute untill this to install
 
     #load the service
   - name: daemon reload
