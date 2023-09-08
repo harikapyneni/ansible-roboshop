@@ -2,7 +2,7 @@
   hosts: mysql
   become: yes
   tasks:
-  - name: Disable Current msql version
+  - name: Disable Current mysql version
     ansible.builtin.command: yum module disable mysql -y 
 
   - name: copy mysql repo
@@ -15,10 +15,10 @@
       name: mysql-community-server
       state: installed
 
-  - name: start and enable mysql
+  - name: restart mysql
     ansible.builtin.service:
       name: mysqld
-      state: installed
+      state: restarted
       enabled: yes
 
   - name: setup mysql root password
