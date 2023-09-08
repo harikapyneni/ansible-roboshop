@@ -5,9 +5,9 @@
   
   - name: install redis repo
     ansible.builtin.yum:
-      name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
+      name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm 
       state: installed
-      disable_gpg_check: true #
+      disable_gpg_check: true 
   
   - name: enable redis 6.2
     ansible.builtin.command: yum module enable redis:remi-6.2 -y
@@ -16,6 +16,7 @@
     ansible.builtin.yum:
       name: redis
       state: installed
+      
 
   #allowing the connections from 127.0.0.1 to 0.0.0.0 in /etc/redis.conf
   - name: allow remote connections to redis
