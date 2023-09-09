@@ -57,7 +57,7 @@
 
   - name: daemon reload
     ansible.builtin.systemd:
-    daemon_reload: true
+      daemon_reload: true
 
   - name: restart shipping service
     ansible.builtin.service:
