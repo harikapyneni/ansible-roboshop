@@ -38,7 +38,7 @@
     ansible.builtin.unarchive:
       src: https://roboshop-builds.s3.amazonaws.com/shipping.zip
       dest: /app
-      remote_src: yes
+        remote_src: yes
 
   - name: install dependencies
     ansible.builtin.command: mvn clean package
