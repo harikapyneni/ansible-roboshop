@@ -80,7 +80,7 @@
       state: installed
 
   - name: load catalogue data #schema
-    ansible.builtin.shell: mongo --host mongodb.ops2ai.cloud < /app/schema/catalogue.js
+    ansible.builtin.command: mongo --host mongodb.ops2ai.cloud < /app/schema/catalogue.js
 
   - name: restart catalogue 
     ansible.builtin.service:
